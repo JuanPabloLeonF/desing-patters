@@ -22,7 +22,9 @@ Las fuentes viven bajo `src/main/java`:
 | **Factory Method** — ejercicio | `creational/factory_method/exercise/` | Logística: transportes por tipo. |
 | **Abstract Factory** — concepto | `creational/abstract_factory/concept/` | Familias de muebles (p. ej. victoriano vs. moderno). |
 | **Abstract Factory** — ejercicio | `creational/abstract_factory/excersice/` | UI multiplataforma (familias de widgets). *(Nota: el nombre de la carpeta tiene un typo habitual; `excersice` → `exercise`. Mantener hasta que se renombre en el repo.)* |
-| **Retos combinados** | `creational/exercise/` | **RPG**: Builder + Factory Method. **Automotriz**: Builder + Factory Method + Abstract Factory. |
+| **Singleton** — concepto | `creational/singleton/concept/` | Registro de ejemplo con instancia única (holder idiomatic). |
+| **Singleton** — ejercicio (plantilla) | `creational/singleton/exercise/` | Enunciado en Javadoc (`MainConfigurationRegistry`); código por completar. |
+| **Retos combinados** | `creational/exercise/` | **RPG**, **automotriz** (`MainAutomotive`). **Plantilla** `MainSmartHomeIntegrated`: los cuatro patrones (+ Singleton); enunciado en Javadoc. |
 
 Estructura resumida:
 
@@ -39,9 +41,13 @@ src/main/java/
     ├── abstract_factory/
     │   ├── concept/
     │   └── excersice/
+    ├── singleton/
+    │   ├── concept/
+    │   └── exercise/
     └── exercise/
         ├── MainRPG.java               # Builder + Factory Method
-        └── MainAutomotive.java        # Los tres patrones creacionales
+        ├── MainAutomotive.java       # Builder + Factory Method + Abstract Factory
+        └── MainSmartHomeIntegrated.java # Plantilla: los cuatro + Singleton (solo Javadoc inicial)
 ```
 
 ## Orden sugerido de estudio
@@ -50,7 +56,11 @@ src/main/java/
 2. **Factory Method** — `MainConceptFactoryMethod` → `MainTransportFactory`
 3. **Reto combinado** — `MainRPG` (Builder + Factory Method)
 4. **Abstract Factory** — `MainAbstractFactory` → `MainUIFactory`
-5. **Reto combinado amplio** — `MainAutomotive` (los tres patrones)
+5. **Reto combinado amplio** — `MainAutomotive` (los tres patrones hasta Abstract Factory)
+
+6. **Singleton** — `MainConceptSingleton` → plantilla `MainConfigurationRegistry`
+
+7. **Reto combinado máximo** — `MainSmartHomeIntegrated` (Builder + Factory Method + Abstract Factory + Singleton; plantilla con enunciado)
 
 Esa progresión refleja la idea original del repo: consolidar cada patrón y luego **mezclarlo** con lo anterior antes de pasar al siguiente nivel.
 
